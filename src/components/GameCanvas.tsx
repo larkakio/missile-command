@@ -17,7 +17,7 @@ export function GameCanvas() {
   const { state, dispatch } = useGame();
   const audio = useAudio();
   const audioRef = useRef(audio); // Store audio in ref
-  const animationFrameRef = useRef<number>();
+  const animationFrameRef = useRef<number | undefined>(undefined);
   const waveSpawnedRef = useRef(false);
   const enemiesSeenRef = useRef(false); // Track if we've seen enemies this wave
   const stateRef = useRef(state); // Store latest state in ref
