@@ -66,6 +66,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+        <meta name="base:app_id" content="6988951b6dea3c7b8e149fb4" />
       </head>
       <body className="antialiased">
         <GameProvider>{children}</GameProvider>
