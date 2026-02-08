@@ -13,6 +13,7 @@
     "buttonTitle": "Defend Cities",
     "splashImageUrl": "https://missile-command-two.vercel.app/hero-image.png",
     "splashBackgroundColor": "#0a0e1a",
+    "webhookUrl": "",
     "subtitle": "Classic Arcade Defense",
     "description": "Protect your cities from endless missile attacks. Swipe to fire, chain explosions, survive as long as you can in this classic arcade remake for mobile.",
     "screenshotUrls": [
