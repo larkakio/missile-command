@@ -1,0 +1,17 @@
+{
+  "name": "Missile Command",
+  "short_name": "Missile Command",
+  "description": "Classic arcade defense game",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0e1a",
+  "theme_color": "#0a0e1a",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    }
+  ]
+}

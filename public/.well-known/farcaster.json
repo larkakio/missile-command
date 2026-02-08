@@ -1,0 +1,32 @@
+{
+  "accountAssociation": {
+    "header": "ADD_AFTER_MANIFEST_GENERATION",
+    "payload": "ADD_AFTER_MANIFEST_GENERATION",
+    "signature": "ADD_AFTER_MANIFEST_GENERATION"
+  },
+  "miniapp": {
+    "version": "1",
+    "name": "Missile Command",
+    "homeUrl": "https://missile-command.vercel.app/",
+    "iconUrl": "https://missile-command.vercel.app/icon.png",
+    "imageUrl": "https://missile-command.vercel.app/hero-image.png",
+    "buttonTitle": "Defend Cities",
+    "splashImageUrl": "https://missile-command.vercel.app/hero-image.png",
+    "splashBackgroundColor": "#0a0e1a",
+    "subtitle": "Classic Arcade Defense",
+    "description": "Protect your cities from endless missile attacks. Swipe to fire, chain explosions, survive as long as you can in this classic arcade remake for mobile.",
+    "screenshotUrls": [
+      "https://missile-command.vercel.app/screenshot-1.png",
+      "https://missile-command.vercel.app/screenshot-2.png"
+    ],
+    "primaryCategory": "games",
+    "tags": ["arcade", "defense", "retro", "action"],
+    "heroImageUrl": "https://missile-command.vercel.app/hero-image.png",
+    "tagline": "Defend. Survive. Score.",
+    "ogTitle": "Missile Command",
+    "ogDescription": "Classic arcade defense reimagined for mobile",
+    "ogImageUrl": "https://missile-command.vercel.app/hero-image.png",
+    "noindex": false,
+    "requiredChains": ["eip155:8453"]
+  }
+}
