@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { GameProvider } from "@/context/GameContext";
 
-const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://missile-command.vercel.app";
+const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://missile-command-two.vercel.app";
 
 // Farcaster Mini App Embed
 const FC_EMBED = {
