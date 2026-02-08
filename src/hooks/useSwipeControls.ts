@@ -9,7 +9,7 @@ interface SwipeEvent {
 }
 
 export function useSwipeControls(
-  canvasRef: React.RefObject<HTMLCanvasElement>,
+  canvasRef: React.RefObject<HTMLCanvasElement | null>,
   onSwipe: (event: SwipeEvent) => void
 ) {
   const touchStartRef = useRef<{ x: number; y: number; time: number } | null>(null);
