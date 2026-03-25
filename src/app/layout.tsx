@@ -1,25 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { GameProvider } from "@/context/GameContext";
+import { Providers } from "./providers";
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://missile-command-two.vercel.app";
 
 // Farcaster Mini App Embed
-const FC_EMBED = {
-  version: "1",
-  imageUrl: `${APP_URL}/hero-image.png`,
-  button: {
-    title: "Defend Cities",
-    action: {
-      type: "launch_frame",
-      name: "Missile Command",
-      url: APP_URL,
-      splashImageUrl: `${APP_URL}/hero-image.png`,
-      splashBackgroundColor: "#0a0e1a",
-    },
-  },
-};
-
 export const metadata: Metadata = {
   title: "Missile Command - Defend Your Cities",
   description:
@@ -52,8 +38,6 @@ export const metadata: Metadata = {
     "mobile-web-app-capable": "yes",
     "apple-mobile-web-app-capable": "yes",
     "apple-mobile-web-app-status-bar-style": "black-translucent",
-    "fc:miniapp": JSON.stringify(FC_EMBED),
-    "fc:frame": JSON.stringify(FC_EMBED),
   },
 };
 
@@ -69,7 +53,9 @@ export default function RootLayout({
         <meta name="base:app_id" content="6988951b6dea3c7b8e149fb4" />
       </head>
       <body className="antialiased">
-        <GameProvider>{children}</GameProvider>
+        <Providers>
+          <GameProvider>{children}</GameProvider>
+        </Providers>
       </body>
     </html>
   );
