@@ -18,7 +18,11 @@ import {
 
 import { WalletModal } from "./WalletModal";
 
-export function DailyCheckIn() {
+type DailyCheckInProps = {
+  variant?: "inline" | "floating";
+};
+
+export function DailyCheckIn({ variant = "floating" }: DailyCheckInProps) {
   const { address, isConnected } = useAccount();
   const chainId = useChainId();
   const { switchChainAsync } = useSwitchChain();
@@ -68,9 +72,14 @@ export function DailyCheckIn() {
 
   const busy = isWriting;
 
+  const outerClass =
+    variant === "floating"
+      ? "pointer-events-auto fixed bottom-4 left-4 right-4 z-[9999] flex max-w-md flex-col gap-2 sm:left-auto sm:right-4 sm:w-80 pb-[max(0.5rem,env(safe-area-inset-bottom))]"
+      : "relative z-50 mx-auto mb-4 flex w-full max-w-lg flex-col gap-2 px-4";
+
   return (
     <>
-      <div className="pointer-events-auto fixed bottom-4 left-4 right-4 z-[80] flex max-w-md flex-col gap-2 sm:left-auto sm:right-4 sm:w-80">
+      <div className={outerClass}>
         {err ? (
           <p className="rounded-lg bg-red-950/90 px-3 py-2 text-xs text-red-200">{err}</p>
         ) : null}

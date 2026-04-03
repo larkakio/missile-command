@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { GameProvider } from "@/context/GameContext";
 import { Providers } from "./providers";
@@ -7,6 +7,7 @@ const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://missile-command-two.
 
 // Farcaster Mini App Embed
 export const metadata: Metadata = {
+  metadataBase: new URL(APP_URL),
   title: "Missile Command - Defend Your Cities",
   description:
     "Classic arcade defense game on Base Network. Protect cities from missiles in this mobile mini app.",
@@ -33,12 +34,21 @@ export const metadata: Metadata = {
     apple: "/icon.png",
   },
   other: {
-    viewport: "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover",
-    "theme-color": "#0a0e1a",
     "mobile-web-app-capable": "yes",
     "apple-mobile-web-app-capable": "yes",
     "apple-mobile-web-app-status-bar-style": "black-translucent",
+    "base:app_id":
+      process.env.NEXT_PUBLIC_BASE_APP_ID ?? "6988951b6dea3c7b8e149fb4",
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#0a0e1a",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  viewportFit: "cover",
 };
 
 export default function RootLayout({
@@ -48,10 +58,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-        <meta name="base:app_id" content="6988951b6dea3c7b8e149fb4" />
-      </head>
       <body className="antialiased">
         <Providers>
           <GameProvider>{children}</GameProvider>
