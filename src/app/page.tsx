@@ -1,5 +1,6 @@
 "use client";
 
+import { DailyCheckIn } from "@/components/DailyCheckIn";
 import { StartScreen } from "@/components/StartScreen";
 import { GameCanvas } from "@/components/GameCanvas";
 import { GameUI } from "@/components/GameUI";
@@ -9,6 +10,7 @@ export default function Home() {
   return (
     <main className="min-h-screen flex flex-col items-center justify-center p-4 bg-[#0a0e1a]">
       <div className="w-full max-w-4xl">
+        <DailyCheckIn variant="inline" />
         <StartScreen />
         <GameUI />
         <GameCanvas />
